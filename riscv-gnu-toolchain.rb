@@ -35,6 +35,7 @@ class RiscvGnuToolchain < Formula
 
     system "./configure", *args
     system "make"
+		system "make linux"
 
     # don't install Python bindings if system already has them
     if File.exist?("#{HOMEBREW_PREFIX}/share/gcc-8.2.0")
